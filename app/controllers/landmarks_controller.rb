@@ -3,8 +3,8 @@ class LandmarksController < ApplicationController
   set :views, proc { File.join(root, '../views/') }
   register Sinatra::Twitter::Bootstrap::Assets
 
-  get '/figures' do
-    @figures = Figure.all
+  get '/landmarks' do
+    @landmarks = Landmarks.all
     erb :"figures/index"
   end
 end
